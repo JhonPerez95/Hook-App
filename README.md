@@ -1,7 +1,7 @@
-### Tecnologias Usadas:
+# Tecnologias Usadas:
 
-# React 16.8 (Hooks)
+#### React 16.8 (Hooks)
 
-# Bootstrap
+#### Bootstrap
 
 ## Link de Produccion:
