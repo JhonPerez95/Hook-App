@@ -1,5 +1,7 @@
 import React from 'react';
-import FormCustomHook from './components/useEffect/FormCustomHook';
+
+// import FormCustomHook from './components/useEffect/FormCustomHook';
+import MultipleCustomHooks from './components/exampless/MultipleCustomHooks';
 // import SimpleForm from './components/useEffect/SimpleForm';
 // import CounterApp from './components/useState/CounterApp';
 // import CounterCustomHook from './components/useState/CounterCustomHook';
@@ -7,7 +9,7 @@ import FormCustomHook from './components/useEffect/FormCustomHook';
 function App() {
   return (
     <>
-      <FormCustomHook />
+      <MultipleCustomHooks />
     </>
   );
 }
