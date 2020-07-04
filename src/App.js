@@ -5,15 +5,17 @@ import React from 'react';
 // import FocusScreen from './components/useRef/FocusScreen';
 // import ExampleRef from './components/useRef/ExampleRef';
 // import Memorize from './components/memos/Memorize';
-import MemoHook from './components/memos/MemoHook';
+// import MemoHook from './components/memos/MemoHook';
 // import SimpleForm from './components/useEffect/SimpleForm';
 // import CounterApp from './components/useState/CounterApp';
 // import CounterCustomHook from './components/useState/CounterCustomHook';
+import { Padre } from './components/taskMemo/Padre';
+// import CallbackHook from './components/memos/CallbackHook';
 
 function App() {
   return (
     <div>
-      <MemoHook />
+      <Padre />
     </div>
   );
 }
