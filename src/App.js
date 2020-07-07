@@ -9,13 +9,14 @@ import React from 'react';
 // import SimpleForm from './components/useEffect/SimpleForm';
 // import CounterApp from './components/useState/CounterApp';
 // import CounterCustomHook from './components/useState/CounterCustomHook';
-import { Padre } from './components/taskMemo/Padre';
+// import { Padre } from './components/taskMemo/Padre';
+import TodoApp from './components/useReducer/TodoApp';
 // import CallbackHook from './components/memos/CallbackHook';
 
 function App() {
   return (
     <div>
-      <Padre />
+      <TodoApp />
     </div>
   );
 }
