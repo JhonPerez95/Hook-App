@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
 const CounterApp = () => {
   const [state, setState] = useState({
@@ -25,7 +24,5 @@ const CounterApp = () => {
     </>
   );
 };
-
-CounterApp.propTypes = {};
 
 export default CounterApp;

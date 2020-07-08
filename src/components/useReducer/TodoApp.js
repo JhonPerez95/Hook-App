@@ -1,5 +1,9 @@
 import React, { useReducer } from 'react';
+
 import todoReducer from './todoReducer';
+import useForm from '../../hook/useForm';
+
+import './style.css';
 
 const initialState = [
   {
@@ -10,7 +14,31 @@ const initialState = [
 ];
 
 const TodoApp = () => {
-  const [todos] = useReducer(todoReducer, initialState);
+  const [todos, dispatch] = useReducer(todoReducer, initialState);
+
+  const [formState, handleInputChange, resetInput] = useForm({
+    description: '',
+  });
+  const { description } = formState;
+
+  const handleSunmit = (e) => {
+    e.preventDefault();
+
+    const newTodo = {
+      id: new Date().getTime(),
+      description: description,
+      done: false,
+    };
+
+    const action = {
+      type: 'ADD_TODO',
+      payload: newTodo,
+    };
+
+    dispatch(action);
+    resetInput();
+  };
+
   return (
     <div>
       <h1>TodoApp: {todos.length}</h1>
@@ -31,18 +59,23 @@ const TodoApp = () => {
             ))}
           </ul>
         </div>
-        <div className="col-5">
+        <div className="col-4">
           <h3>Add ToDo:</h3>
           <hr />
-          <form action="">
+          <form onSubmit={handleSunmit}>
             <input
               type="text"
               className="form-control"
               name="description"
               placeholder="Comprar ..."
               autoComplete="off"
+              value={description}
+              onChange={handleInputChange}
             />
-            <button className="btn btn-outline-primary mt-1 btn-block">
+            <button
+              className="btn btn-outline-primary mt-2 btn-block"
+              type="submit"
+            >
               Save ToDo
             </button>
           </form>

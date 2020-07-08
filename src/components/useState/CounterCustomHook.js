@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import useCounter from '../../hook/useCounter';
 
 const CounterCustomHook = () => {
@@ -22,7 +21,5 @@ const CounterCustomHook = () => {
     </>
   );
 };
-
-CounterCustomHook.propTypes = {};
 
 export default CounterCustomHook;
