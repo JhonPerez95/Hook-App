@@ -1,28 +1,40 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 
 import todoReducer from './todoReducer';
 import useForm from '../../hook/useForm';
 
 import './style.css';
 
-const initialState = [
-  {
-    id: new Date().getTime(),
-    description: 'Aprender React',
-    done: false,
-  },
-];
+const init = () => {
+  return JSON.parse(localStorage.getItem('todos')) || [];
+
+  // return [
+  //   {
+  //     id: new Date().getTime(),
+  //     description: 'Aprender React',
+  //     done: false,
+  //   },
+  // ];
+};
 
 const TodoApp = () => {
-  const [todos, dispatch] = useReducer(todoReducer, initialState);
+  const [todos, dispatch] = useReducer(todoReducer, [], init);
 
   const [formState, handleInputChange, resetInput] = useForm({
     description: '',
   });
   const { description } = formState;
 
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
   const handleSunmit = (e) => {
     e.preventDefault();
+
+    if (description.trim().length <= 1) {
+      return;
+    }
 
     const newTodo = {
       id: new Date().getTime(),
@@ -37,6 +49,15 @@ const TodoApp = () => {
 
     dispatch(action);
     resetInput();
+  };
+
+  const handleDelete = (id) => {
+    const action = {
+      type: 'DELETE_TODO',
+      payload: id,
+    };
+
+    dispatch(action);
   };
 
   return (
@@ -54,7 +75,14 @@ const TodoApp = () => {
                 <p className="text-center">
                   {i + 1}. {item.description}
                 </p>
-                <button className="btn btn-danger">Delete</button>
+                <button
+                  className="btn btn-danger "
+                  onClick={() => {
+                    handleDelete(item.id);
+                  }}
+                >
+                  Delete
+                </button>
               </li>
             ))}
           </ul>
