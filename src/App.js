@@ -10,13 +10,14 @@ import React from 'react';
 // import CounterApp from './components/useState/CounterApp';
 // import CounterCustomHook from './components/useState/CounterCustomHook';
 // import { Padre } from './components/taskMemo/Padre';
-import TodoApp from './components/useReducer/TodoApp';
+// import TodoApp from './components/useReducer/TodoApp';
+import MainApp from './components/useContext/MainApp';
 // import CallbackHook from './components/memos/CallbackHook';
 
 function App() {
   return (
     <div>
-      <TodoApp />
+      <MainApp />
     </div>
   );
 }
