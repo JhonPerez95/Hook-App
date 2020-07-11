@@ -4,11 +4,11 @@ import AppRouter from './AppRouter';
 import { UserContext } from './UserContext';
 
 const MainApp = () => {
-  const user2 = {
-    id: 123,
-    name: 'jhon',
-    email: 'jhon@gmail.com',
-  };
+  // const user2 = {
+  //   id: 123,
+  //   name: 'jhon',
+  //   email: 'jhon@gmail.com',
+  // };
 
   const [user, setUser] = useState({});
   return (
