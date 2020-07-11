@@ -19,8 +19,8 @@ const MultipleCustomHooks = () => {
         <div className="alert alert-info text-center">loading ...</div>
       ) : (
         <blockquote className="blockquote text-right">
-          <p className="mb-0"> {quote}</p>
-          <footer className="blockquote-footer"> {author}</footer>
+          <p className="mb-0">{quote}</p>
+          <footer className="blockquote-footer">{author}</footer>
         </blockquote>
       )}
       <button type="button" className="btn btn-success" onClick={increment}>
