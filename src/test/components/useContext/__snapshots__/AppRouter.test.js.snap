@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the component <AppRouter/> Debe mostrarse correctamente 1`] = `
+<div>
+  <nav
+    className="navbar navbar-expand-lg navbar-light bg-light"
+  >
+    <div
+      className="collapse navbar-collapse"
+      id="navbarNavAltMarkup"
+    >
+      <div
+        className="navbar-nav"
+      >
+        <a
+          className="nav-item nav-link active"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+        <a
+          className="nav-item nav-link"
+          href="/login"
+          onClick={[Function]}
+        >
+          Login
+        </a>
+        <a
+          className="nav-item nav-link"
+          href="/about"
+          onClick={[Function]}
+        >
+          About
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div>
+    <h1>
+      HomePage
+    </h1>
+    <hr />
+    <pre
+      className="container"
+    >
+      "jhonPerez95"
+    </pre>
+  </div>
+</div>
+`;
